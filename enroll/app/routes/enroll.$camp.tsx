@@ -12,6 +12,9 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
+  if (!params.camp) {
+    throw new Response("Missing camp name", { status: 404 });
+  }
   return { campName: params.camp };
 };
 
