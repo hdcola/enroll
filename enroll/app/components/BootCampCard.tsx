@@ -6,13 +6,19 @@ import {
   CardFooter,
   Button,
 } from "@nextui-org/react";
+import { PressEvent } from "@react-types/shared";
 
 interface CardProps {
   title: string;
   description: string;
+  onPress?: (e: PressEvent) => void | undefined;
 }
 
-const BootCampCard: React.FC<CardProps> = ({ title, description }) => {
+const BootCampCard: React.FC<CardProps> = ({
+  title,
+  description,
+  onPress = undefined,
+}) => {
   return (
     <Card>
       <CardHeader>
@@ -22,7 +28,12 @@ const BootCampCard: React.FC<CardProps> = ({ title, description }) => {
         <p>{description}</p>
       </CardBody>
       <CardFooter>
-        <Button className="text-tiny" color="primary" radius="full">
+        <Button
+          className="text-tiny"
+          color="primary"
+          radius="full"
+          onPress={onPress}
+        >
           立即参与
         </Button>
       </CardFooter>

@@ -29,6 +29,9 @@ export default function Index() {
         <BootCampCard
           title="Web开发训练营"
           description="学习如何开发最新的网站和应用程序，并将它们发布出去让大家使用。"
+          onPress={() => {
+            window.location.href = "enroll/coding";
+          }}
         />
         <BootCampCard
           title="AI工具训练营"
