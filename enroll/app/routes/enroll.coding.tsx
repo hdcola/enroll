@@ -55,7 +55,7 @@ export default function Page() {
   return (
     <div className="font-sans w-full">
       <div className="p-4">
-        <h1 className="text-3xl">报名编码训练营</h1>
+        <h1 className="text-3xl">报名Web开发训练营</h1>
         <p className="mt-4">选择可以参加训练营的时间段报名</p>
         <Form method="POST">
           <Input
